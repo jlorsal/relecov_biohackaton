@@ -2,7 +2,9 @@
 
 ### Date: **29 June - 1 July**
 ### Project: [Hackathon Relecov](https://github.com/orgs/BU-ISCIII/projects/16/views/1)
-### Repo: [repositorio relecov_bio hackaton](https://github.com/BU-ISCIII/relecov_biohackaton)
+### Hackathon repository: [repositorio relecov_bio hackaton](https://github.com/BU-ISCIII/relecov_biohackaton)
+### Relecov-tools: [repositorio relecov-tools](https://github.com/BU-ISCIII/relecov-tools)
+### Relecov-platform: [repositorio relecov-platform](https://github.com/BU-ISCIII/relecov-platform)
 ### Slack channel: [Slack channel](https://relecov.slack.com/archives/C03JSJW3RJM)
 
 ### Previous seminars:
