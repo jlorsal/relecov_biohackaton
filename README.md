@@ -6,7 +6,7 @@
 ### Slack channel: [Slack channel](https://relecov.slack.com/archives/C03JSJW3RJM)
 
 ### Previous seminars:
-- **Relecov Biohackathon: programación, diseño y plataforma Speakers**. Speakers: Guillermo Gorines. **Date**: 20/6/2022 at 11:00 p.m
+- **Relecov Biohackathon: programación, diseño y plataforma**. Speakers: Guillermo Gorines and Sara Monzón. **Date**: 20/6/2022 at 11:00 p.m
 - **Introducción a Git, Github y Actions**. Speakers: Sarai Varona and Sara Monzón. **Date**: 22/6/2022 at 11:00 p.m
 - **Introducción a Django, Dash y Plotly**. Speakers: Luis Aranda and Erika Kvalem. **Date**: 27/6/2022 at 11:00 p.m
 
