@@ -1,6 +1,14 @@
-## I Relecov Biohackathon 
+## I Relecov Biohackathon
+## Group 4
 
 ### Day 1
+
+Helps
+
+- [MarkDown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+- [NF code of ViralRecon](https://github.com/jlorsal/viralrecon)
+
+---
 
 #### Task1: Bibliography Seeking
 
@@ -15,5 +23,47 @@ Available at Galaxy: https://https//aries.iss.it
 GH: https://github.com/aknijn/sars-cov-2-recovery
 
 Flowchart: https://github.com/aknijn/sars-cov-2-recovery/blob/main/sars-cov-2-recovery.png
+
+<img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/sars-cov-2-recovery.png" />
+
+---
+
+- A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity
+Carlos Farkas et al. (2021).
+Front. Microbiol., 21 June 2021
+https://doi.org/10.3389/fmicb.2021.665041
+https://www.frontiersin.org/articles/10.3389/fmicb.2021.665041/full
+
+Available at: https://github.com/cfarkas/SARS-CoV-2-freebayes
+
+As Galaxy project here: https://usegalaxy.org/u/carlosfarkas/h/snpeffsars-cov-2
+
+---
+
+- ASPICov: An automated pipeline for identification of SARS-Cov2 nucleotidic variants
+Valentin Tilloy et al. 
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0262953
+https://doi.org/10.1371/journal.pone.0262953
+
+Workflow: https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0262953.g001
+
+Available: https://gitlab.com/vtilloy/aspicov
+
+Singularity images
+
+<img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/journal.pone.0262953.g001.PNG" width="75%" />
+
+---
+
+Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19
+Gubio S. Campos et al. (2020).
+https://doi.org/10.1016/j.jviromet.2020.113888
+https://www.sciencedirect.com/science/article/pii/S0166093420301403
+
+Workflow:
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
+
+---
 
 
