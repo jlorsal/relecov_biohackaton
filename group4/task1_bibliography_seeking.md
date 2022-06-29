@@ -32,8 +32,8 @@ Available at Galaxy: [](https://https//aries.iss.it)
 ---
 
 - **A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity**
+
 Carlos Farkas et al. (2021).
-Front. Microbiol., 21 June 2021
 
 [DOI](https://doi.org/10.3389/fmicb.2021.665041)
 
@@ -64,7 +64,7 @@ Singularity images
 ---
 
 - **Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19**
-- 
+
 Gubio S. Campos et al. (2020).
 
 [DOI](https://doi.org/10.1016/j.jviromet.2020.113888)
@@ -78,12 +78,14 @@ Workflow:
 ---
 
 - **Comparison of Illumina MiSeq and the Ion Torrent PGM and S5 platforms for whole-genome sequencing of picornaviruses and caliciviruses**
-- 
+
 Rachel L. Marine et atl. (2020).
 
 [DOI](https://doi.org/10.1016/j.jviromet.2020.113865)
 
 [Journal](https://www.sciencedirect.com/science/article/pii/S0166093420301178)
+
+---
 
 
 
