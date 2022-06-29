@@ -1,16 +1,27 @@
 ## I Relecov Biohackathon
 ## Group 4
 
-### Day 1
+## Tasks
 
-Helps
-
-- [MarkDown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
-- [NF code of ViralRecon](https://github.com/jlorsal/viralrecon)
+<ul>
+  <li><a href="#BibliographySeeking">Task 1. Bibliography seeking.</a></li>
+  <li><a href="#IonTorrentData">Task 2. Provide Ion Torrent data set.</a></li>
+  <li><a href="#SoftwareImplementation">Task 3. Software implementation: preprocessing, mapping and variant calling.</a></li>
+</ul>
 
 ---
 
-#### Task1: Bibliography Seeking
+### Day 1
+
+Helps
+- [MarkDown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+- [NF code of ViralRecon](https://github.com/jlorsal/viralrecon)
+- https://github.com/pezmaster31/bamtools
+
+---
+
+<a name="BibliographySeeking"></a>
+### Task1: Bibliography Seeking
 
 - **SARS-CoV-2 RECoVERY: a multi-platform open-source bioinformatic pipeline for the automatic construction and 
 analysis of SARS-CoV-2 genomes from NGS sequencing data**. 
@@ -27,7 +38,7 @@ Available at Galaxy: [](https://https//aries.iss.it)
 
 [Flowchart](https://github.com/aknijn/sars-cov-2-recovery/blob/main/sars-cov-2-recovery.png)
 
-<img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/sars-cov-2-recovery.png" />
+<img src="../group4/images/sars-cov-2-recovery.png" />
 
 ---
 
@@ -59,7 +70,7 @@ Valentin Tilloy et al.
 
 Singularity images
 
-<img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/journal.pone.0262953.g001.PNG" width="75%" />
+<img src="../group4/images/journal.pone.0262953.g001.PNG" width="75%" />
 
 ---
 
@@ -73,7 +84,7 @@ Gubio S. Campos et al. (2020).
 
 Workflow:
 
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
+<img src="../group4/images/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
 
 ---
 
@@ -87,5 +98,19 @@ Rachel L. Marine et atl. (2020).
 
 ---
 
+<a name="IonTorrentData"></a>
+### Task2: Ion Torrent dataset
 
+- Check if FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project are available.
+- Test directly with the FASTQ files provided (if any) into Viral-Recon.
+- Set a BaseQuality filter (?) and other possible filters in the config of Viral-Recon.
+- ...
 
+---
+
+<a name="SoftwareImplementation"></a>
+### Task 3: Software Implementation
+
+- Check if a UBam-to-FASTQ is needed depending on the provided IonTorrent datasets provided.
+- ...
+---
