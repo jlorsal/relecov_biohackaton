@@ -156,14 +156,15 @@ outBAM="sorted.bam"
 samtools sort -n ${inBAM} -o ${outBAM}
 
 # Convert BAM to single FASTQ
-inBAM="sorted.bam"
+BAM="sorted.bam"
 FASTQ="output.fastq"
-samtools bam2fq ${inBAM} > ${FASTQ}
+samtools bam2fq ${BAM} > ${FASTQ}
 
 # Convert BAM into separate R1 and R2 FASTQ files
+BAM="sorted.bam"
 FASTQ1="sample_R1.fastq"
 FASTQ2="sample_R2.fastq"
-samtools fastq -@ 8 SAMPLE_sorted.bam \
+samtools fastq -@ 8 ${BAM} \
     -1 ${FASTQ1} \
     -2 ${FASTQ2} \
     -0 /dev/null -s /dev/null -n
@@ -175,11 +176,14 @@ samtools fastq -@ 8 SAMPLE_sorted.bam \
 BAM="input.bam"
 FASTQ1="forward.fastq"
 FASTQ2="reverse.fastq"
-bedtools bamtofastq -i ${infile} -fq ${FASTQ1} -fq2 ${FASTQ2}
+bedtools bamtofastq -i ${BAM} -fq ${FASTQ1} -fq2 ${FASTQ2}
 ```
 
 - [PICARD](http://broadinstitute.github.io/picard/command-line-overview.html#SamToFastq)
 ```Bash
+BAM="input.bam"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
 java -Xmx2g -jar Picard-SamToFastq.jar \
     I=${BAM} \
     F=${FASTQ1} \
@@ -191,7 +195,16 @@ java -Xmx2g -jar Picard-SamToFastq.jar \
 - [bamtools](https://github.com/pezmaster31/bamtools)
 
 ```Bash
-bamtools convert -in file1.bam -in file2.bam ... -format fastq >reads.fq
+BAM="input.bam"
+FASTQ="output.fastq"
+bamtools convert -in ${BAM} --format fastq > ${FASTQ}
+
+# Split an interleaved FASTQ extracting reads ending with '/1' or '/2'
+FASTQ="interleaved.fastq"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
+cat ${FASTQ} | grep '^@.*/1$' -A 3 --no-group-separator > ${FASTQ1}
+cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 ```
 
 Tools used with IonTorrent data:
