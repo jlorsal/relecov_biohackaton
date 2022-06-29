@@ -12,42 +12,50 @@ Helps
 
 #### Task1: Bibliography Seeking
 
-- SARS-CoV-2 RECoVERY: a multi-platform open-source bioinformatic pipeline for the automatic construction and 
-analysis of SARS-CoV-2 genomes from NGS sequencing data. 
+- **SARS-CoV-2 RECoVERY: a multi-platform open-source bioinformatic pipeline for the automatic construction and 
+analysis of SARS-CoV-2 genomes from NGS sequencing data**. 
+
 Sabato, L. D. et al. (2021).
-bioRxiv. https://doi.org/10.1101/2021.01.16.425365
-https://www.biorxiv.org/content/10.1101/2021.01.16.425365v1
 
-Available at Galaxy: https://https//aries.iss.it
+[DOI](https://doi.org/10.1101/2021.01.16.425365)
 
-GH: https://github.com/aknijn/sars-cov-2-recovery
+[bioRxiv](https://www.biorxiv.org/content/10.1101/2021.01.16.425365v1)
 
-Flowchart: https://github.com/aknijn/sars-cov-2-recovery/blob/main/sars-cov-2-recovery.png
+Available at Galaxy: [](https://https//aries.iss.it)
+
+[Github](https://github.com/aknijn/sars-cov-2-recovery)
+
+[Flowchart](https://github.com/aknijn/sars-cov-2-recovery/blob/main/sars-cov-2-recovery.png)
 
 <img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/sars-cov-2-recovery.png" />
 
 ---
 
-- A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity
+- **A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity**
 Carlos Farkas et al. (2021).
 Front. Microbiol., 21 June 2021
-https://doi.org/10.3389/fmicb.2021.665041
-https://www.frontiersin.org/articles/10.3389/fmicb.2021.665041/full
 
-Available at: https://github.com/cfarkas/SARS-CoV-2-freebayes
+[DOI](https://doi.org/10.3389/fmicb.2021.665041)
 
-As Galaxy project here: https://usegalaxy.org/u/carlosfarkas/h/snpeffsars-cov-2
+[Journal](https://www.frontiersin.org/articles/10.3389/fmicb.2021.665041/full)
+
+[GitHub]( https://github.com/cfarkas/SARS-CoV-2-freebayes)
+
+[Galaxy Project](https://usegalaxy.org/u/carlosfarkas/h/snpeffsars-cov-2)
 
 ---
 
-- ASPICov: An automated pipeline for identification of SARS-Cov2 nucleotidic variants
+- **ASPICov: An automated pipeline for identification of SARS-Cov2 nucleotidic variants**
+
 Valentin Tilloy et al. 
-https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0262953
-https://doi.org/10.1371/journal.pone.0262953
 
-Workflow: https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0262953.g001
+[DOI](https://doi.org/10.1371/journal.pone.0262953)
 
-Available: https://gitlab.com/vtilloy/aspicov
+[Journal](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0262953)
+
+[Workflow](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0262953.g001)
+
+[GitLab](https://gitlab.com/vtilloy/aspicov)
 
 Singularity images
 
@@ -55,15 +63,27 @@ Singularity images
 
 ---
 
-Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19
+- **Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19**
+- 
 Gubio S. Campos et al. (2020).
-https://doi.org/10.1016/j.jviromet.2020.113888
-https://www.sciencedirect.com/science/article/pii/S0166093420301403
+
+[DOI](https://doi.org/10.1016/j.jviromet.2020.113888)
+
+[Journal]https://www.sciencedirect.com/science/article/pii/S0166093420301403)
 
 Workflow:
 
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
 
 ---
+
+- **Comparison of Illumina MiSeq and the Ion Torrent PGM and S5 platforms for whole-genome sequencing of picornaviruses and caliciviruses**
+- 
+Rachel L. Marine et atl. (2020).
+
+[DOI](https://doi.org/10.1016/j.jviromet.2020.113865)
+
+[Journal](https://www.sciencedirect.com/science/article/pii/S0166093420301178)
+
 
 
