@@ -144,10 +144,54 @@ Rachel L. Marine et atl. (2020).
 - Check if a UBam-to-FASTQ is needed depending on the IonTorrent datasets provided.
 - ...
 
-Some tools for BAM-to-FASTQ:
+**Some tools for BAM-to-FASTQ:
 - [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
+
+```Bash
+inBAM="unsorted.bam"
+outBAM="sorted.bam"
+
+# Sort paired-end read alignment in BAM file (sort by name -n)
+samtools sort -n ${inBAM} -o ${outBAM}
+
+# Convert BAM to single FASTQ
+inBAM="sorted.bam"
+FASTQ="output.fastq"
+samtools bam2fq ${inBAM} > ${FASTQ}
+
+# Convert BAM into separate R1 and R2 FASTQ files
+FASTQ1="sample_R1.fastq"
+FASTQ2="sample_R2.fastq"
+samtools fastq -@ 8 SAMPLE_sorted.bam \
+    -1 ${FASTQ1} \
+    -2 ${FASTQ2} \
+    -0 /dev/null -s /dev/null -n
+```
+
 - [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
+
+```Bash
+BAM="input.bam"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
+bedtools bamtofastq -i ${infile} -fq ${FASTQ1} -fq2 ${FASTQ2}
+```
+
+- [PICARD](http://broadinstitute.github.io/picard/command-line-overview.html#SamToFastq)
+```Bash
+java -Xmx2g -jar Picard-SamToFastq.jar \
+    I=${BAM} \
+    F=${FASTQ1} \
+    F2=${FASTQ2}
+
+#Note, F2 to get paired-end fastq files (R1 and R2)
+```
+
 - [bamtools](https://github.com/pezmaster31/bamtools)
+
+```Bash
+bamtools convert -in file1.bam -in file2.bam ... -format fastq >reads.fq
+```
 
 Tools used with IonTorrent data:
 - [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
