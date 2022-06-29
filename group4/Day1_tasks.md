@@ -144,7 +144,8 @@ Rachel L. Marine et atl. (2020).
 - Check if a UBam-to-FASTQ is needed depending on the IonTorrent datasets provided.
 - ...
 
-**Some tools for BAM-to-FASTQ:
+**Tools for a BAM-to-FASTQ conversion:**
+
 - [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
 
 ```Bash
@@ -196,6 +197,7 @@ bamtools convert -in file1.bam -in file2.bam ... -format fastq >reads.fq
 Tools used with IonTorrent data:
 - [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
 - [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
+
 
 
   <p align="right" dir="auto">
