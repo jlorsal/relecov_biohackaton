@@ -117,7 +117,12 @@ Rachel L. Marine et atl. (2020).
 <a name="IonTorrentData"></a>
 ### Task 2: Ion Torrent dataset
 
-- Check if FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project are available.
+- Use FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project as benchmarking to test Viral-Recon. We have access to FASTQ files for ten known samples provided by BU-ISCIII. We want to test:
+  <ol>
+    <li>The raw FASTQ files into Viral-Recon.</li>
+    <li>The uBam files (some sort of raw FASTQ format file from IonTorrent).</li>
+    <li>The FASTQ files with some preprocessing filtering (BQ>20).</li>
+  </ol>
 - Test directly with the FASTQ files provided (if any) into Viral-Recon.
 - Set a BaseQuality filter (?) and other possible filters (depending on the noise within the input reads, specially in indels) in the config of Viral-Recon.
 - ...
@@ -143,6 +148,11 @@ Some tools for BAM-to-FASTQ:
 - [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
 - [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
 - [bamtools](https://github.com/pezmaster31/bamtools)
+
+Tools used with IonTorrent data:
+- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
+- [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
+
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
