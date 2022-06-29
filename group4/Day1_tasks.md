@@ -16,12 +16,11 @@
 Helps
 - [MarkDown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 - [NF code of ViralRecon](https://github.com/jlorsal/viralrecon)
-- https://github.com/pezmaster31/bamtools
 
 ---
 
 <a name="BibliographySeeking"></a>
-### Task1: Bibliography Seeking
+### Task 1: Bibliography Seeking
 
 - **SARS-CoV-2 RECoVERY: a multi-platform open-source bioinformatic pipeline for the automatic construction and 
 analysis of SARS-CoV-2 genomes from NGS sequencing data**. 
@@ -99,11 +98,11 @@ Rachel L. Marine et atl. (2020).
 ---
 
 <a name="IonTorrentData"></a>
-### Task2: Ion Torrent dataset
+### Task 2: Ion Torrent dataset
 
 - Check if FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project are available.
 - Test directly with the FASTQ files provided (if any) into Viral-Recon.
-- Set a BaseQuality filter (?) and other possible filters in the config of Viral-Recon.
+- Set a BaseQuality filter (?) and other possible filters (depending on the noise within the input reads, specially in indels) in the config of Viral-Recon.
 - ...
 
 ---
@@ -111,6 +110,12 @@ Rachel L. Marine et atl. (2020).
 <a name="SoftwareImplementation"></a>
 ### Task 3: Software Implementation
 
-- Check if a UBam-to-FASTQ is needed depending on the provided IonTorrent datasets provided.
+- Check if a UBam-to-FASTQ is needed depending on the IonTorrent datasets provided.
 - ...
+
+Some tools for BAM-to-FASTQ:
+- [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
+- [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
+- [bamtools](https://github.com/pezmaster31/bamtools)
+
 ---
