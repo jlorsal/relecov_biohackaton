@@ -1,3 +1,5 @@
+<a name="home"></a>
+  
 ## I Relecov Biohackathon
 ## Group 4
 
@@ -12,6 +14,8 @@
 ---
 
 ### Day 1
+
+<!-- ************************** SECTION HERE -->
 
 Helps
 - [MarkDown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
@@ -39,6 +43,7 @@ Available at Galaxy: [](https://https//aries.iss.it)
 
 <img src="../group4/images/sars-cov-2-recovery.png" />
 
+
 ---
 
 - **A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity**
@@ -52,6 +57,7 @@ Carlos Farkas et al. (2021).
 [GitHub]( https://github.com/cfarkas/SARS-CoV-2-freebayes)
 
 [Galaxy Project](https://usegalaxy.org/u/carlosfarkas/h/snpeffsars-cov-2)
+
 
 ---
 
@@ -71,6 +77,7 @@ Singularity images
 
 <img src="../group4/images/journal.pone.0262953.g001.PNG" width="75%" />
 
+
 ---
 
 - **Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19**
@@ -85,6 +92,7 @@ Workflow:
 
 <img src="../group4/images/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
 
+
 ---
 
 - **Comparison of Illumina MiSeq and the Ion Torrent PGM and S5 platforms for whole-genome sequencing of picornaviruses and caliciviruses**
@@ -95,7 +103,16 @@ Rachel L. Marine et atl. (2020).
 
 [Journal](https://www.sciencedirect.com/science/article/pii/S0166093420301178)
 
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+  
+
 ---
+  
+<!-- ************************** SECTION HERE -->
 
 <a name="IonTorrentData"></a>
 ### Task 2: Ion Torrent dataset
@@ -105,8 +122,17 @@ Rachel L. Marine et atl. (2020).
 - Set a BaseQuality filter (?) and other possible filters (depending on the noise within the input reads, specially in indels) in the config of Viral-Recon.
 - ...
 
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+  
+  
 ---
 
+<!-- ************************** SECTION HERE -->
+ 
 <a name="SoftwareImplementation"></a>
 ### Task 3: Software Implementation
 
@@ -118,4 +144,10 @@ Some tools for BAM-to-FASTQ:
 - [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
 - [bamtools](https://github.com/pezmaster31/bamtools)
 
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+  
 ---
