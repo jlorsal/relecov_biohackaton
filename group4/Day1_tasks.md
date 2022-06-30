@@ -218,11 +218,17 @@ cat ${FASTQ} | grep '^@.*/1$' -A 3 --no-group-separator > ${FASTQ1}
 cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 ```
 
-Tools used with IonTorrent data:
-- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
-- [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
+**Tools used with IonTorrent data**
 
-
+<ul>
+  <li><a href="wonder.cdc.gov/amd/flu/irma">IRMA, Iterative Refinement Meta-Assembler (from CDC)</a></li>
+    <ul>
+      <li><a href="https://github.com/peterk87/irma">IRMA, GitHub.</a></li>
+      <li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3030-6">IRMA, paper.</a></li>
+      <li><a href="https://github.com/peterk87/irma/blob/master/IRMA_RES/defaults.sh">Default values in IRMA, according to GitHub.</a></li>
+   </ul>
+  <li><a href="https://github.com/iontorrent/TS/tree/master/Analysis/TMAP">TMAP, Torrent Mapping Alignment Program (GitHub repository)</a></li>
+</ul>
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
@@ -270,7 +276,6 @@ Tools used with IonTorrent data:
 **Experimental code for TMAP**
 
 ```Bash
-
 # Define dirs and files
 refdir="dir-to-reference"
 ref="NC_045512.2.fasta"
@@ -324,8 +329,33 @@ m=10
 BAM="test.sorted.mapped.bam"
 FASTA="test.fasta"
 samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -m ${10}
+```
 
-...
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+
+---
+
+> Conclusions after Day 2
+
+- Most of mutations seen in samples processed with ViralRecon and IonTorrent propietary-pipelines are compatible as seen in Nextclade-web.
+- We found discrepancies on some mutations probably dependant of the allele frequency balance in the variant and/or the consensus.
+- We suggest performing a more intense benchmarking with tens of samples and check the results at the mutation and lineage/clade level.
+
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+ 
+---
+
+
+
+
 
 
 
