@@ -236,6 +236,18 @@ Tools used with IonTorrent data:
   
 ---
 
+**Experiments**
+
+- Run ViralRecon with FASTQ from the HERA QCs.
+
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+ 
+---
+
 <a name="Day2"></a>
 ### Day 2
 
