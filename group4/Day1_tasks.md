@@ -264,7 +264,9 @@ Tools used with IonTorrent data:
 - Provide SFTP credentials to Joan to share data.
 - Several things to do in the very near future:
 <ul>
+  <ul>
   <li>Perform a survey within the RELECOV labs currently using IonTorrent technology to know which files they produce (BAM, uBAM, FASTQ...).</li>
   <li>Test ViralRecon using a uBAM previously converted to FASTQ from the very first step of the pipeline.</li>
   <li>Test ViralRecon using a BAM (already mapped with TMAP) after the mapping step.</li>
+  </ul>
 </ul>
