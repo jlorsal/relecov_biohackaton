@@ -2,7 +2,7 @@
   
 ## I Relecov Biohackathon
 ## Group 4
-Participants: Joan Gibert Fernandez, Joan R Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández.
+Participants: Joan Gibert Fernández, Joan R Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández.
 
 ## Tasks
 
@@ -266,3 +266,67 @@ Tools used with IonTorrent data:
   <li>Test ViralRecon using a BAM (already mapped with TMAP) after the mapping step.</li>
   </ul> 
 </ul>
+
+**Experimental code for TMAP**
+
+```Bash
+
+# Define dirs and files
+refdir="dir-to-reference"
+ref="NC_045512.2.fasta"
+indir="dir-to-FASTQ"
+fastq="sample.fastq.gz"
+tmap="dir-to-tmap/tmap"
+sam="test.sam"
+bam="test.bam"
+
+$tmap mapall -f ${refdir}/${ref} \
+  -i fastq -r ${fastqdir}/${fastq} \
+  -s ${sam} \
+  -v -Y -u -o 0 stage1 map4
+
+samtools view -S -b ${sam} > ${bam}
+
+samtools flagstat ${bam}
+# Example
+#262144 + 0 in total (QC-passed reads + QC-failed reads)
+#262144 + 0 primary
+#0 + 0 secondary
+#0 + 0 supplementary
+#0 + 0 duplicates
+#0 + 0 primary duplicates
+#261016 + 0 mapped (99.57% : N/A)
+#261016 + 0 primary mapped (99.57% : N/A)
+#0 + 0 paired in sequencing
+#0 + 0 read1
+#0 + 0 read2
+#0 + 0 properly paired (N/A : N/A)
+#0 + 0 with itself and mate mapped
+#0 + 0 singletons (N/A : N/A)
+#0 + 0 with mate mapped to a different chr
+#0 + 0 with mate mapped to a different chr (mapQ>=5)
+
+# Sort BAM
+inBAM="test.bam"
+outBAM="test.sorted.bam"
+samtools sort ${inBAM} > ${outBAM}
+
+# Keep only mapped reads [Optional]
+inBAM="test.sorted.bam"
+outBAM="test.sorted.mapped.bam"
+samtools view -F 0x04 -b ${inBAM} > ${outBAM}
+
+# Pileup and make consensus FASTA using different thresholds for 'minimum quality score threshold to count base' (q), 
+# 'minimum frequency threshold to call consensus (t=0-1)', and 'minimum depth to call consensus' (m)
+q=20
+t=0
+m=10
+BAM="test.sorted.mapped.bam"
+FASTA="test.fasta"
+samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -m ${10}
+
+...
+
+
+
+
