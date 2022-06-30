@@ -243,7 +243,7 @@ Tools used with IonTorrent data:
 
 > SyncUP meeting in the morning:
 
-- To get IonTorrent output files: FASTQ, uBAM or BAM?
+- To get IonTorrent output files: FASTQ, uBAM or BAM? It depends on the sequencer: PGM or S5?
 - Ask the HERA staff about the QC results: how many laboratories in RELECOV are producing IonTorrent data? In which format?
 - If we start from BAM (already mapped reads with TMAP), we can go directly with ViralRecon?
 - If we start from uBAM, try the BAM-to-FASTQ.
