@@ -2,7 +2,7 @@
   
 ## I Relecov Biohackathon
 ## Group 4
-Participants: Joan Gibert Fernández, Joan R Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández.
+Participants: Joan Gibert Fernández, Joan R. Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández.
 
 ## Tasks
 
@@ -52,7 +52,6 @@ Available at Galaxy: [](https://https//aries.iss.it)
 
 <img src="../group4/images/sars-cov-2-recovery.png" />
 
-
 ---
 
 - **A Novel SARS-CoV-2 Viral Sequence Bioinformatic Pipeline Has Found Genetic Evidence That the Viral 3′ Untranslated Region (UTR) Is Evolving and Generating Increased Viral Diversity**
@@ -66,7 +65,6 @@ Carlos Farkas et al. (2021).
 [GitHub]( https://github.com/cfarkas/SARS-CoV-2-freebayes)
 
 [Galaxy Project](https://usegalaxy.org/u/carlosfarkas/h/snpeffsars-cov-2)
-
 
 ---
 
@@ -86,7 +84,6 @@ Singularity images
 
 <img src="../group4/images/journal.pone.0262953.g001.PNG" width="75%" />
 
-
 ---
 
 - **Ion torrent-based nasopharyngeal swab metatranscriptomics in COVID-19**
@@ -101,7 +98,6 @@ Workflow:
 
 <img src="../group4/images/1-s2.0-S0166093420301403-gr1_lrg.jpg" />
 
-
 ---
 
 - **Comparison of Illumina MiSeq and the Ion Torrent PGM and S5 platforms for whole-genome sequencing of picornaviruses and caliciviruses**
@@ -111,6 +107,16 @@ Rachel L. Marine et atl. (2020).
 [DOI](https://doi.org/10.1016/j.jviromet.2020.113865)
 
 [Journal](https://www.sciencedirect.com/science/article/pii/S0166093420301178)
+
+---
+
+- **SARS-CoV-2 Whole-Genome Sequencing by Ion S5 Technology—Challenges, Protocol Optimization and Success Rates for Different Strains**
+
+Maria Szargut et al. (2022).
+
+[DOI](https://doi.org/10.3390%2Fv14061230)
+
+[Journal](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9227152/)
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
@@ -350,6 +356,7 @@ samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -
 - At the nucleotide level, we saw some divergences across the viral genome, probably related to how IonTorrent (IRMA?) and ViralRecon process the allele frequencies at the variant calling and consensus steps.
 - We suggest widening the benchmarking using tens of samples (provided by Joan) to find other mismatches and study in detail some of the discrepancies (i.e. nucleotides close to primer ends, deletions of two and three AA, etc.).
 - We clean-the-house at the sFTP site to upload more IonTorrent files for Day 3.
+- We need the IonTorrent SARS-CoV-2 protocol primer manifest BED files!
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
