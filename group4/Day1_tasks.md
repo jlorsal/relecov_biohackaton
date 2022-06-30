@@ -16,8 +16,16 @@ Sarai Varona
   <li><a href="#SoftwareImplementation">Task 3. Software implementation: preprocessing, mapping and variant calling.</a></li>
 </ul>
 
+## Hackathon in detail
+<ul>
+  <li><a href="#Day1">Day 1</a></i>
+  <li><a href="#Day2">Day 2</a></i>
+  <li><a href="#Day3">Day 1</a></i>
+</ul>
+
 ---
 
+<a name="Day1"></a>
 ### Day 1
 
 <!-- ************************** SECTION HERE -->
@@ -228,6 +236,7 @@ Tools used with IonTorrent data:
   
 ---
 
+<a name="Day2"></a>
 ### Day 2
 
 <!-- ************************** SECTION HERE -->
