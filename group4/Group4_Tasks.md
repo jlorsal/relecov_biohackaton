@@ -14,9 +14,9 @@ Participants: Joan Gibert Fernández, Joan R Grande, José Miguel Lorenzo Salaza
 
 ## Hackathon in detail
 <ul>
-  <li><a href="#Day1">Day 1</a></i>
-  <li><a href="#Day2">Day 2</a></i>
-  <li><a href="#Day3">Day 3</a></i>
+  <li><a href="#Day1">Day 1 (June 29, 2022)</a></i>
+  <li><a href="#Day2">Day 2 (June 30, 2022</a></i>
+  <li><a href="#Day3">Day 3 (July 1, 2022)</a></i>
 </ul>
 
 ---
