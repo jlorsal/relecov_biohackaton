@@ -2,6 +2,11 @@
   
 ## I Relecov Biohackathon
 ## Group 4
+Participants:
+Joan Gibert Fernandez
+Joan R Grande
+José Miguel Lorenzo Salazar
+Sarai Varona
 
 ## Tasks
 
@@ -222,3 +227,17 @@ Tools used with IonTorrent data:
  </p>
   
 ---
+
+### Day 2
+
+<!-- ************************** SECTION HERE -->
+
+> SyncUP meeting in the morning:
+
+- To get IonTorrent output files: FASTQ, uBAM or BAM?
+- Ask the HERA staff about the QC results: how many laboratories in RELECOV are producing IonTorrent data? In which format?
+- If we start from BAM (already mapped reads with TMAP), we can go directly with ViralRecon?
+- If we start from uBAM, try the BAM-to-FASTQ.
+- If we start from FASTQ, find the corresponging BED files.
+- Provide SFTP credentials to Joan to share data.
+- ...
