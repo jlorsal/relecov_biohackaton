@@ -239,6 +239,7 @@ Tools used with IonTorrent data:
 **Experiments**
 
 - Run ViralRecon with FASTQ from the HERA QCs.
+- Run IRMA with FASTQ.
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
