@@ -218,10 +218,19 @@ cat ${FASTQ} | grep '^@.*/1$' -A 3 --no-group-separator > ${FASTQ1}
 cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 ```
 
-Tools used with IonTorrent data:
-- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
-- [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
+---
 
+> Tools used with IonTorrent data
+
+<ul>
+  <li><a href="https://wonder.cdc.gov/amd/flu/irma/">IRMA, Iterative Refinement Meta-Assembler (from CDC):</li>
+  <ul>
+    <li><a href="https://github.com/peterk87/irma">IRMA GitHub.</a></li>
+    <li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3030-6">IRMA paper.</a></li>
+    <li><a href="https://github.com/peterk87/irma/blob/master/IRMA_RES/defaults.sh">IRMA default values.</a></li>
+  </ul>
+  <li><a href="https://github.com/iontorrent/TS/tree/master/Analysis/TMAP">TMAP, Torrent Mapping Alignment Program (GitHub repository).</a></li>
+</ul>
 
 
   <p align="right" dir="auto">
