@@ -330,3 +330,4 @@ samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -
 
 
 
+
