@@ -2,6 +2,7 @@
   
 ## I Relecov Biohackathon
 ## Group 4
+Participants: Joan Gibert Fernández, Joan R Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández.
 
 ## Tasks
 
@@ -11,8 +12,16 @@
   <li><a href="#SoftwareImplementation">Task 3. Software implementation: preprocessing, mapping and variant calling.</a></li>
 </ul>
 
+## Hackathon in detail
+<ul>
+  <li><a href="#Day1">Day 1</a></i>
+  <li><a href="#Day2">Day 2</a></i>
+  <li><a href="#Day3">Day 1</a></i>
+</ul>
+
 ---
 
+<a name="Day1"></a>
 ### Day 1
 
 <!-- ************************** SECTION HERE -->
@@ -117,7 +126,12 @@ Rachel L. Marine et atl. (2020).
 <a name="IonTorrentData"></a>
 ### Task 2: Ion Torrent dataset
 
-- Check if FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project are available.
+- Use FASTQ files from IonTorrent sequencing technology (PGM and/or S5) from the HERA project as benchmarking to test Viral-Recon. We have access to FASTQ files for ten known samples provided by BU-ISCIII. We want to test:
+  <ol>
+    <li>The raw FASTQ files into Viral-Recon.</li>
+    <li>The uBam files (some sort of raw FASTQ format file from IonTorrent).</li>
+    <li>The FASTQ files with some preprocessing filtering (BQ>20).</li>
+  </ol>
 - Test directly with the FASTQ files provided (if any) into Viral-Recon.
 - Set a BaseQuality filter (?) and other possible filters (depending on the noise within the input reads, specially in indels) in the config of Viral-Recon.
 - ...
@@ -139,10 +153,76 @@ Rachel L. Marine et atl. (2020).
 - Check if a UBam-to-FASTQ is needed depending on the IonTorrent datasets provided.
 - ...
 
-Some tools for BAM-to-FASTQ:
-- [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
-- [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
-- [bamtools](https://github.com/pezmaster31/bamtools)
+**Tools to preprocess the Ion Torrent FASTQ files in case they are provided as BAM or uBAM**
+
+**How to perform BAM-to-FASTQ**
+
+> [Samtools: bam2fq](http://www.htslib.org/doc/1.1/samtools.html)
+
+```Bash
+inBAM="unsorted.bam"
+outBAM="sorted.bam"
+
+# Sort paired-end read alignment in BAM file (sort by name -n)
+samtools sort -n ${inBAM} -o ${outBAM}
+
+# Convert BAM to single FASTQ
+BAM="sorted.bam"
+FASTQ="output.fastq"
+samtools bam2fq ${BAM} > ${FASTQ}
+
+# Convert BAM into separate R1 and R2 FASTQ files
+BAM="sorted.bam"
+FASTQ1="sample_R1.fastq"
+FASTQ2="sample_R2.fastq"
+samtools fastq -@ 8 ${BAM} \
+    -1 ${FASTQ1} \
+    -2 ${FASTQ2} \
+    -0 /dev/null -s /dev/null -n
+```
+
+> [BEDtools: bamtofastq](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html)
+
+```Bash
+BAM="input.bam"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
+bedtools bamtofastq -i ${BAM} -fq ${FASTQ1} -fq2 ${FASTQ2}
+```
+
+> [PICARD](http://broadinstitute.github.io/picard/command-line-overview.html#SamToFastq)
+```Bash
+BAM="input.bam"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
+java -Xmx2g -jar Picard-SamToFastq.jar \
+    I=${BAM} \
+    F=${FASTQ1} \
+    F2=${FASTQ2}
+
+#Note, F2 to get paired-end fastq files (R1 and R2)
+```
+
+> [bamtools](https://github.com/pezmaster31/bamtools)
+
+```Bash
+BAM="input.bam"
+FASTQ="output.fastq"
+bamtools convert -in ${BAM} --format fastq > ${FASTQ}
+
+# Split an interleaved FASTQ extracting reads ending with '/1' or '/2'
+FASTQ="interleaved.fastq"
+FASTQ1="forward.fastq"
+FASTQ2="reverse.fastq"
+cat ${FASTQ} | grep '^@.*/1$' -A 3 --no-group-separator > ${FASTQ1}
+cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
+```
+
+Tools used with IonTorrent data:
+- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
+- [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
+
+
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
@@ -151,3 +231,102 @@ Some tools for BAM-to-FASTQ:
  </p>
   
 ---
+
+**Experiments**
+
+- Run ViralRecon with FASTQ from the HERA QCs.
+- Run IRMA with FASTQ.
+
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+ 
+---
+
+<a name="Day2"></a>
+### Day 2
+
+<!-- ************************** SECTION HERE -->
+
+> SyncUP meeting in the morning:
+
+- To get IonTorrent output files: FASTQ, uBAM or BAM? It depends on the sequencer: PGM or S5?
+- Ask the HERA staff about the QC results: how many laboratories in RELECOV are producing IonTorrent data? In which format?
+- If we start from BAM (already mapped reads with TMAP), we can go directly with ViralRecon?
+- If we start from uBAM, try the BAM-to-FASTQ.
+- If we start from FASTQ, find the corresponging BED files.
+- Provide SFTP credentials to Joan to share data.
+- Several things to do in the very near future:
+<ul>
+  <ul>
+  <li>Perform a survey within the RELECOV labs currently using IonTorrent technology to know which files they produce (BAM, uBAM, FASTQ...).</li>
+  <li>Test ViralRecon using a uBAM previously converted to FASTQ from the very first step of the pipeline.</li>
+  <li>Test ViralRecon using a BAM (already mapped with TMAP) after the mapping step.</li>
+  </ul> 
+</ul>
+
+**Experimental code for TMAP**
+
+```Bash
+
+# Define dirs and files
+refdir="dir-to-reference"
+ref="NC_045512.2.fasta"
+indir="dir-to-FASTQ"
+fastq="sample.fastq.gz"
+tmap="dir-to-tmap/tmap"
+sam="test.sam"
+bam="test.bam"
+
+$tmap mapall -f ${refdir}/${ref} \
+  -i fastq -r ${fastqdir}/${fastq} \
+  -s ${sam} \
+  -v -Y -u -o 0 stage1 map4
+
+samtools view -S -b ${sam} > ${bam}
+
+samtools flagstat ${bam}
+# Example
+#262144 + 0 in total (QC-passed reads + QC-failed reads)
+#262144 + 0 primary
+#0 + 0 secondary
+#0 + 0 supplementary
+#0 + 0 duplicates
+#0 + 0 primary duplicates
+#261016 + 0 mapped (99.57% : N/A)
+#261016 + 0 primary mapped (99.57% : N/A)
+#0 + 0 paired in sequencing
+#0 + 0 read1
+#0 + 0 read2
+#0 + 0 properly paired (N/A : N/A)
+#0 + 0 with itself and mate mapped
+#0 + 0 singletons (N/A : N/A)
+#0 + 0 with mate mapped to a different chr
+#0 + 0 with mate mapped to a different chr (mapQ>=5)
+
+# Sort BAM
+inBAM="test.bam"
+outBAM="test.sorted.bam"
+samtools sort ${inBAM} > ${outBAM}
+
+# Keep only mapped reads [Optional]
+inBAM="test.sorted.bam"
+outBAM="test.sorted.mapped.bam"
+samtools view -F 0x04 -b ${inBAM} > ${outBAM}
+
+# Pileup and make consensus FASTA using different thresholds for 'minimum quality score threshold to count base' (q), 
+# 'minimum frequency threshold to call consensus (t=0-1)', and 'minimum depth to call consensus' (m)
+q=20
+t=0
+m=10
+BAM="test.sorted.mapped.bam"
+FASTA="test.fasta"
+samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -m ${10}
+
+...
+
+
+
+
