@@ -262,4 +262,9 @@ Tools used with IonTorrent data:
 - If we start from uBAM, try the BAM-to-FASTQ.
 - If we start from FASTQ, find the corresponging BED files.
 - Provide SFTP credentials to Joan to share data.
-- ...
+- Several things to do in the very near future:
+<ul>
+  <li>Perform a survey within the RELECOV labs currently using IonTorrent technology to know which files they produce (BAM, uBAM, FASTQ...).</li>
+  <li>Test ViralRecon using a uBAM previously converted to FASTQ from the very first step of the pipeline.</li>
+  <li>Test ViralRecon using a BAM (already mapped with TMAP) after the mapping step.</li>
+</ul>
