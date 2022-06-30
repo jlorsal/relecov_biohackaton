@@ -16,7 +16,7 @@ Participants: Joan Gibert Fernández, Joan R Grande, José Miguel Lorenzo Salaza
 <ul>
   <li><a href="#Day1">Day 1</a></i>
   <li><a href="#Day2">Day 2</a></i>
-  <li><a href="#Day3">Day 1</a></i>
+  <li><a href="#Day3">Day 3</a></i>
 </ul>
 
 ---
@@ -134,7 +134,7 @@ Rachel L. Marine et atl. (2020).
   </ol>
 - Test directly with the FASTQ files provided (if any) into Viral-Recon.
 - Set a BaseQuality filter (?) and other possible filters (depending on the noise within the input reads, specially in indels) in the config of Viral-Recon.
-- ...
+- Sarai and Joan provided examples of FASTQ obtained with IonTorrent technologies.
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
@@ -151,7 +151,8 @@ Rachel L. Marine et atl. (2020).
 ### Task 3: Software Implementation
 
 - Check if a UBam-to-FASTQ is needed depending on the IonTorrent datasets provided.
-- ...
+- Several outputs are expected: FASTQ (if the user knows how to download files in this format from the sequencing platform), uBAM and BAM.
+- We will need to test TMAP and IRMA.
 
 **Tools to preprocess the Ion Torrent FASTQ files in case they are provided as BAM or uBAM**
 
@@ -244,7 +245,7 @@ cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 **Experiments**
 
 - Run ViralRecon with FASTQ from the HERA QCs.
-- Run IRMA with FASTQ.
+- Run IRMA with FASTQ files.
 
   <p align="right" dir="auto">
    <a href="#home" title="Up">
@@ -279,7 +280,6 @@ cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 **Experimental code for TMAP**
 
 ```Bash
-
 # Define dirs and files
 refdir="dir-to-reference"
 ref="NC_045512.2.fasta"
@@ -333,9 +333,40 @@ m=10
 BAM="test.sorted.mapped.bam"
 FASTA="test.fasta"
 samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -m ${10}
+```
+
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+
+---
+
+> Wrap up of Day 2
+
+- We tested 10 FASTQ files from Ion Torrent technology from the HERA QC with ViralRecon.
+- We compared the global results provided by Nexclade-web. The lineages/clades match is total (10 out of 10).
+- At the nucleotide level, we saw some divergences across the viral genome, probably related to how IonTorrent (IRMA?) and ViralRecon process the allele frequencies at the variant calling and consensus steps.
+- We suggest widening the benchmarking using tens of samples (provided by Joan) to find other mismatches and study in detail some of the discrepancies (i.e. nucleotides close to primer ends, deletions of two and three AA, etc.).
+- We clean-the-house at the sFTP site to upload more IonTorrent files for Day 3.
+
+  <p align="right" dir="auto">
+   <a href="#home" title="Up">
+    <img src="../group4/images/home-icon.png" style="max-width: 100%;">
+   </a>
+ </p>
+ 
+---
+
+<a name="Day3"></a>
+### Day 3
+
+<!-- ************************** SECTION HERE -->
+
+> SyncUP meeting in the morning:
 
 ...
-
 
 
 
