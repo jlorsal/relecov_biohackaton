@@ -219,7 +219,9 @@ cat ${FASTQ} | grep '^@.*/2$' -A 3 --no-group-separator > ${FASTQ2}
 ```
 
 Tools used with IonTorrent data:
-- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](wonder.cdc.gov/amd/flu/irma)
+- [IRMA, Iterative Refinement Meta-Assembler (from CDC)](https://wonder.cdc.gov/amd/flu/irma)
+- [IRMA, GitHub](https://github.com/peterk87/irma)
+- [Irma, paper](Viral deep sequencing needs an adaptive approach: IRMA, the iterative refinement meta-assembler)
 - [TMAP, Torrent Mapping Alignment Program (GitHub repository)](https://github.com/iontorrent/TS/tree/master/Analysis/TMAP)
 
 
