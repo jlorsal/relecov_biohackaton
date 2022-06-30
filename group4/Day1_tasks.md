@@ -2,11 +2,7 @@
   
 ## I Relecov Biohackathon
 ## Group 4
-Participants:
-Joan Gibert Fernandez
-Joan R Grande
-José Miguel Lorenzo Salazar
-Sarai Varona
+Participants: Joan Gibert Fernandez, Joan R Grande, José Miguel Lorenzo Salazar, Sarai Varona Fernández
 
 ## Tasks
 
