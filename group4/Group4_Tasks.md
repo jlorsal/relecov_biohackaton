@@ -373,6 +373,22 @@ samtools mpileup -A -Q 0 ${BAM} | ivar consensus -p test.fasta -q ${q} -t ${0} -
 
 > SyncUP meeting in the morning:
 
+- We checked the Base Quality encoding of IonTorrent FASTQ files. As it uses the tilde character ('~'), which is ASCII(126), it seems IonTorrent provides Phred-like values as Illumina 1.3-1.8 encoding scale, ranging from 64 to 126. Therefore, it will be necessary to **substract 64 from the Phred-like values used by these FASTQ or adapt the corresponging filters in Viral-Recon NF configuration**. [See Phylogenomics: An Introduction, p. 84](https://books.google.es/books?id=ZGsmDwAAQBAJ&pg=PA83&lpg=PA83&dq=what+is+~+in+phred+Ion+Torrent+FASTQ&source=bl&ots=j4GdHZCWZA&sig=ACfU3U0mfwn8ddmorz-kpQJi6BQqvpxB4w&hl=en&sa=X&ved=2ahUKEwi5qcGCsdf4AhWFC-wKHY8iBEwQ6AF6BAgTEAM#v=onepage&q=what%20is%20~%20in%20phred%20Ion%20Torrent%20FASTQ&f=false)
+
+<p>
+  <center>
+    <img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/FASTQ_IonTorrent_base-qual_encoding.png" width=75%" />
+    </center>
+</p>
+
+- FASTQ automatically detects this encoding and shows the corresponding Sanger/Illumina 1.9 equivalente encoding:
+
+<p>
+  <center>
+  <img src="https://github.com/jlorsal/relecov_biohackaton/blob/ion_torrent/group4/images/FASTQ_IonTorrent_phred-like-encoding.png" width="75%" />
+  </center>
+</p>
+
 ...
 
 
